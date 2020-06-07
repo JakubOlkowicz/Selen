@@ -1,0 +1,53 @@
+@import '../global.scss';
+
+.category{
+    background-color: black;
+    .container-fluid{
+        height: 100%;
+        padding: 0;
+        .row{
+            height: 100%;
+        }
+    }
+    .col-md-3 div{
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        h1{
+            position: absolute;
+            color: white;
+            top: 50%;
+            font-size: 45px;
+            margin: 0;
+        }
+    }
+    .concept{
+        background-image: url(../../images/Kat1.png);
+        background-size: cover;
+        position: relative;
+        &::after{
+            content: '';
+            width: 90%;
+            height: 90%;
+            border: $color-blue solid 15px;
+            background-color: transparent;
+            position: absolute;
+            top: 5%;
+
+        }
+    }
+    .desing{
+        background-image: url(../../images/Kat2.png);
+        background-size: cover;
+    }
+    .idea{
+        background-image: url(../../images/Kat3.png);
+        background-size: cover;
+
+    }
+    .develop{
+        background-image: url(../../images/Kat1.png);
+        background-size: cover;
+    }
+}

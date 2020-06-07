@@ -1,0 +1,100 @@
+@import '../global.scss';
+
+.projects{
+    margin-top: -300px;
+    height: auto;
+    .container{
+        background-color: white;
+        padding: 40px;
+    }
+    .container-fluid{
+        background-color: white; 
+        padding: 0;
+    }
+    .first{
+        .col-md-12{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .second{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .pagination{
+            position: absolute;
+            z-index: 10;
+            font-size: 25px;
+            font-weight: bold;
+            .top,.bottom{
+                padding: 15px 30px;
+                background: #82b3ca;
+                color: white;
+            }
+            .bottom{
+                margin-top: -2px;
+                background: $color-blue;
+            }
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+            img{
+                object-fit: contain;
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+        .text-wrap{
+            padding: 0 75px;
+            position: relative;
+            .text{
+                display: inline-block;
+                height: 100%;
+                h1{
+                    line-height: 1.4;
+                    word-break: break-word;
+                    font-weight: 900;
+                    font-size: 37px;
+                    height: auto;
+                }
+                p{
+                    color: $color-gray;
+                    font-size: 12px;
+                    line-height: 3;
+                }
+                &:after{
+                    content: '2';
+                    opacity: 0.1;
+                    position: absolute;
+                    font-size: 345px;
+                    right: 0;
+                    top: 0;
+                    color: $color-gray;
+                    font-weight: bold;                    
+                }
+            }
+        }
+    }
+    .third{
+        flex-direction: row;
+        justify-content: center;
+        margin: 15px 0;
+        .image{
+            height: 115px;
+            width: 180px;
+            margin: 0 15px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .active{
+            border: 10px solid $color-blue;
+        }
+    }
+}

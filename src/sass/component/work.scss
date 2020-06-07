@@ -1,0 +1,50 @@
+@import '../global.scss';
+
+.work{
+    background-image: url(../../images/Work.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container{
+        height: 100%;
+    }
+    .first{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .second{
+        height: 40%;
+    }
+    .col-md-4{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            margin: auto 0;
+            font-size: 45px;
+        }
+        :only-child{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::after{
+                content: '';
+                font-size: 140px;
+                position: absolute;
+                top: -70px;
+                z-index: -1;
+                color: white;
+                text-shadow: 0px 0px 60px $color-gray;
+            }
+        }
+        .dexterity::after{
+            content: '1';
+        }
+        .team::after{
+            content: '2';
+        }
+        .partnership::after{
+            content: '3';
+        }
+    }
+}

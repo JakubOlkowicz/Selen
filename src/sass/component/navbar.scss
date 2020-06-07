@@ -1,0 +1,55 @@
+@import '../global.scss';
+
+.navbar{
+    margin: 25px 0;
+    .navigation{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        li{
+            margin: 0 30px;
+        }
+    }
+    .col-md-2.logo{
+        position: relative;
+        h1{
+            font-size: 20px;
+        }
+        h1::after,h1::before{
+            content: '';
+            position: absolute;
+            background-color: transparent;
+            border: 5px solid $color-blue;
+            width: 5px;
+            height: 5px;
+            width: 25px;
+            height: 25px;
+            top: 35%;
+            left: 9%;
+        }
+        h1::before{
+            border-color: $color-gray;
+            width: 55px;
+            height: 55px;
+            top: 10%;
+            left: 14%;
+            z-index: -1;
+
+        }
+    }
+    .col-md-9{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-md-1{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .search{
+        all: unset;
+        font-size: 24px;
+    }
+}
