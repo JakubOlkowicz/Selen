@@ -23,11 +23,15 @@
         position: relative;
         justify-content: center;
         align-items: center;
+        .col-md-6{
+            padding: 0;
+        }
         .pagination{
             position: absolute;
             z-index: 10;
             font-size: 25px;
             font-weight: bold;
+            flex-direction: column;
             .top,.bottom{
                 padding: 15px 30px;
                 background: #82b3ca;
@@ -63,8 +67,7 @@
                 }
                 p{
                     color: $color-gray;
-                    font-size: 12px;
-                    line-height: 3;
+                    font-size: 14px;
                 }
                 &:after{
                     content: '2';
@@ -72,7 +75,7 @@
                     position: absolute;
                     font-size: 345px;
                     right: 0;
-                    top: 0;
+                    bottom: -25px;
                     color: $color-gray;
                     font-weight: bold;                    
                 }
@@ -91,10 +94,26 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: box-shadow;
+                transition-property: box-shadow;
+                &:hover{
+                    box-shadow: 0px 15px 60px 1px $color-blue;
+                }
             }
+        }
+        .active img:hover{
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+        
         }
         .active{
             border: 10px solid $color-blue;
         }
     }
-}
