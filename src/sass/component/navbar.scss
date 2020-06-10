@@ -38,9 +38,31 @@
 
         }
     }
-    .search{
+    .glass{
         all: unset;
         font-size: 24px;
+        display: block;
+        margin: 0 auto;
+        
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+        transform: scale(1);
+        transition-duration: 0.5s;
+        transition-property: opacity, transform, visibility;
+        transition-timing-function: ease;
+
+    }
+    .search{
+        position: absolute;
+        vertical-align: middle;
+        transform: scale(0);
+        transition-duration: 0.5s;
+        transition-property: opacity, visibility, transform;
+        transition-timing-function: ease;
+        transition: position 0.5s;
     }
     .navbar-nav{
         width: 60%;

@@ -30,35 +30,108 @@
               <li class="nav-item"><a href="">contact</a></li>
               <li class="nav-item"><a href="">blog</a></li>
             </ul>
-            <button class="search">
+            <button onclick=searchActive() class="glass">
               <i class="fas fa-search"></i>
             </button>
+            <form id="search" class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">              <i class="fas fa-search"></i>
+              </button>
+            </form>
           </div>
     </nav>
   </header>
-  <section class="slider ">
-    <div class="container-fluid">
-      <div class="row no-gutters">
-        <div class="col-5 ">
+  <section class="slider">
+    <div id="slides" class="container-fluid">
+      <div class="row no-gutters first slideActive">
+        <div class="col-5 col-sm-12 col-12">
           <div class="left">
             <div class="center">
               <p>john doe</p>
               <h1>01</h1>
             </div>
             <div class="bottom">
-              <ul class="number">
-                <li class="active">01</li>
-                <li>02</li>
-                <li>03</li>
-                <li>04</li>
+              <ul class="number" id="number">
+                <li role="button" onclick=sliderTop(id) id="first" class="active">01</li>
+                <li role="button" onclick=sliderTop(id) id="second">02</li>
+                <li role="button" onclick=sliderTop(id) id="third">03</li>
+                <li role="button" onclick=sliderTop(id) id="fourth">04</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-7 ">
+        <div class="col-7 col-sm-12 col-12">
           <div class="right">
-            <img src="./images/Top.png" alt="">
             <h1>Architecture aims at eternity</h1>
+          </div>
+        </div>
+      </div>
+      <div  class="row no-gutters second">
+        <div class="col-5 col-sm-12 col-12 ">
+          <div class="left">
+            <div class="center">
+              <p>john black</p>
+              <h1>02</h1>
+            </div>
+            <div class="bottom">
+              <ul class="number" id="number">
+                <li role="button" onclick=sliderTop(id) id="first">01</li>
+                <li role="button" onclick=sliderTop(id) id="second" class="active">02</li>
+                <li role="button" onclick=sliderTop(id) id="third">03</li>
+                <li role="button" onclick=sliderTop(id) id="fourth">04</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 col-sm-12 col-12 ">
+          <div class="right">
+            <h1>Lorem ipsum dolor, sit</h1>
+          </div>
+        </div>
+      </div>
+      <div  class="row no-gutters third">
+        <div class="col-5 col-sm-12 col-12">
+          <div class="left">
+            <div class="center">
+              <p>jack black</p>
+              <h1>03</h1>
+            </div>
+            <div class="bottom">
+              <ul class="number" id="number">
+                <li role="button" onclick=sliderTop(id) id="first" >01</li>
+                <li role="button" onclick=sliderTop(id) id="second">02</li>
+                <li role="button" onclick=sliderTop(id) id="third" class="active">03</li>
+                <li role="button" onclick=sliderTop(id) id="fourth">04</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 col-sm-12 col-12">
+          <div class="right">
+            <h1> amet consectetur adipisicing elit. </h1>
+          </div>
+        </div>
+      </div>
+      <div  class="row no-gutters fourth">
+        <div class="col-5 col-sm-12 col-12">
+          <div class="left">
+            <div class="center">
+              <p>lovecraft</p>
+              <h1>04</h1>
+            </div>
+            <div class="bottom">
+              <ul class="number" id="number">
+                <li role="button" onclick=sliderTop(id) id="first" >01</li>
+                <li role="button" onclick=sliderTop(id) id="second">02</li>
+                <li role="button" onclick=sliderTop(id) id="third">03</li>
+                <li role="button" onclick=sliderTop(id) id="fourth" class="active">04</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 col-sm-12 col-12">
+          <div class="right">
+            <h1>Eum, molestias sequi. </h1>
           </div>
         </div>
       </div>
@@ -91,22 +164,22 @@
   <section class="category">
     <div class="container-fluid">
       <div class="row no-gutters">
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="idea">
             <h1>Idea.</h1>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="concept">
             <h1>Concept.</h1>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="desing">
             <h1>Desing.</h1>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-12">
           <div class="develop">
             <h1>Develop.</h1>
           </div>
@@ -150,62 +223,123 @@
         </div>
       </div>
     </div> 
-    <div class="container-fluid">
-      <div class="row second">
+    <div class="container-fluid" id="projects">
+      <div id="first" class="row no-gutters second slideActive">
         <div class="pagination">
-          <div class="top">></div>
-          <div class="bottom"><span><</span></div>
+          <div role="button" onclick="sliderProjects(id)" id="next" class="top">></div>
+          <div role="button" onclick="sliderProjects(id)" id="prev" class="bottom"><span><</span></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
           <div class="image">
-            <img src="./images/architecture1.jpg" alt="">
+            <img src="./images/architecture2.jpg" alt="">
           </div>
         </div>
-        <div class="col-md-6 text-wrap">
+        <div class="col-md-6 col-sm-12 text-wrap">
           <div class="text">
             <h1>
               Modern art gallery Warsaw, Poland
             </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde magni eveniet soluta sunt consequatur et tenetur culpa repudiandae! Nemo corporis quis natus quisquam maiores odio illo optio modi repellat.</p>
             <button class="btn">case study</button>
+          </div>     
+        </div>
+      </div>
+      <div id="second" class="row no-gutters second">
+        <div class="pagination">
+          <div role="button" onclick="sliderProjects(id)" id="next" class="top">></div>
+          <div role="button" onclick="sliderProjects(id)" id="prev" class="bottom"><span><</span></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="image">
+            <img src="./images/staircase.jpg" alt="">     
           </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-wrap">
+            <div class="text">
+              <h1>
+                Modern art gallery Warsaw, Poland
+              </h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde magni eveniet soluta sunt consequatur et tenetur culpa repudiandae! Nemo corporis quis natus quisquam maiores odio illo optio modi repellat.</p>
+              <button class="btn">case study</button>
+            </div>      
+          </div>
+      </div>
+      <div id="third" class="row no-gutters second">
+        <div class="pagination">
+          <div role="button" onclick="sliderProjects(id)" id="next" class="top">></div>
+          <div role="button" onclick="sliderProjects(id)" id="prev" class="bottom"><span><</span></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="image">
+            <img src="./images/Budynek.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-wrap">
+            <div class="text">
+              <h1>
+                Modern art gallery Warsaw, Poland
+              </h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde magni eveniet soluta sunt consequatur et tenetur culpa repudiandae! Nemo corporis quis natus quisquam maiores odio illo optio modi repellat.</p>
+              <button class="btn">case study</button>
+            </div>      
+        </div>
+      </div>
+      <div id="fourth" class="row no-gutters second">
+        <div class="pagination">
+          <div role="button" onclick="sliderProjects(id)" id="next" class="top">></div>
+          <div role="button" onclick="sliderProjects(id)" id="prev" class="bottom"><span><</span></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="image">
+            <img src="./images/architecture1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-wrap">
+            <div class="text">
+              <h1>
+                Modern art gallery Warsaw, Poland
+              </h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde magni eveniet soluta sunt consequatur et tenetur culpa repudiandae! Nemo corporis quis natus quisquam maiores odio illo optio modi repellat.</p>
+              <button class="btn">case study</button>
+            </div>    
+      </div>
+    </div>
+    <div class="container">
+      <div class="row third" id="image">
+        <div role="button" onclick=sliderProjects(id) class="col-3 image active" id="first">
+          <img src="./images/architecture2.jpg" alt="">
+        </div>
+        <div role="button" onclick=sliderProjects(id) class="col-3 image" id="second">
+          <img src="./images/staircase.jpg" alt="">
+        </div>
+        <div role="button" onclick=sliderProjects(id) class="col-3 image" id="third">
+          <img src="./images/Budynek.png" alt="">
+        </div>
+        <div role="button" onclick=sliderProjects(id) class="col-3 image " id="fourth">
+          <img src="./images/architecture1.jpg" alt="">
         </div>
       </div>
     </div>
-    <div class="row third">
-        <div class="image">
-          <img src="./images/architecture2.jpg" alt="">
-        </div>
-        <div class="image">
-          <img src="./images/staircase.jpg" alt="">
-        </div>
-        <div class="image">
-          <img src="./images/Budynek.png" alt="">
-        </div>
-        <div class="image active">
-          <img src="./images/architecture1.jpg" alt="">
-        </div>
-    </div>
   </section>
   <section class="contact">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row brands">
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
-        <div class="col-md-2">
+        <div class="col-2">
           <img src="./images/logo.png" alt="">
         </div>
       </div>
@@ -230,7 +364,8 @@
       </div>
     </div>
   </section>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
