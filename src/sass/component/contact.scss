@@ -1,9 +1,12 @@
 @import '../global.scss';
 
 .contact{
-    height: 750px;
+    height: 550px;
+    .container-fluid{
+        height: 100%;
+    }
     .brands{
-        margin: 40px 80px;
+        margin: 40px 25px;
         padding: 40px 0;
     }
     .form{
@@ -43,6 +46,10 @@
                 color: $color-gray;    
                 letter-spacing: 2px;
                 padding: 10px 0;
+                &:hover, &.active{
+                    color: $color-blue;
+                    border-bottom: 1px solid $color-blue;
+                }
             }
             
         }
@@ -74,7 +81,7 @@
                 }
             }
             textarea{
-                height: 30%;
+                height: 20%;
                 font-size: 12px;
                 margin-bottom: 20px;
             } 

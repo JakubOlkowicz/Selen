@@ -6,7 +6,6 @@ sliderTop = function(id){
     let pagginations = document.querySelectorAll('#number > li');
     //Functions!!
     currentSlide = function() {
-        console.log(pagginations);
       let itemToShow = Math.abs(slide % numSlides);
       [].forEach.call(slides, function(el) {
         el.classList.remove('slideActive')
@@ -47,7 +46,6 @@ sliderProjects = function(id){
     let numPagginations = pagginations.length
     //Functions!!
     currentSlide = function() {
-      console.log('slide', slide)
       let itemToShow = Math.abs(slide % numSlides);
       [].forEach.call(slides, function(el) {
         el.classList.remove('slideActive')

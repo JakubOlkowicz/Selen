@@ -1,6 +1,7 @@
 @import '../global.scss';
 
 .work{
+    height: 550px;
     background-image: url(../../images/Work.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,7 +37,7 @@
             &::after{
                 font-size: 140px;
                 position: absolute;
-                top: -70px;
+                top: -80px;
                 z-index: -1;
                 font-weight: bold;
                 color: white;

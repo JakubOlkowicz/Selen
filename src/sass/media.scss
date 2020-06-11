@@ -3,11 +3,62 @@
     p{
         line-height: 2;
     }
+    .title{
+        font-size: 14px;
+    }
+    //About
+    .about{
+        .text{
+            h1{
+                font-size: 40px;
+            }
+        }
+        .image{
+            h1{
+                font-size: 50px;
+            }
+        }
+    }
+    //Category
+    .category{
+        .col-md-3{
+            div{
+                h1{
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    //Projects
+    .projects{
+        .second{
+            .text-wrap{
+                    padding: 0 45px;
+                .text{
+                    h1{
+                        font-size: 30px;
+                    }
+                }
+            }
+            .pagination{
+                font-size: 20px;
+                top:40% ;
+                .top,.bottom{
+                    padding: 10px 25px;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:767px){
+    //Global
     section{
         height: auto;
     }
     //Slider
     .slider{
+        margin: 0;
         .left{
             padding: 0 25px;
             .center{
@@ -46,6 +97,7 @@
     .about{
         height: auto;
         padding: 0;
+        margin: 0;
         .text{
             h1{
                font-size: 35px; 
@@ -57,10 +109,11 @@
             &::after{
                 height: 80%;
                 width: 65%;
-                left: 10%;
+                right: 0;
             }
             h1{
                 font-size: 40px;
+                left: 20%;
             }
             img{
                 width: 65%;
@@ -70,6 +123,7 @@
     //Category
     .category{
         height: 700px;
+        margin-bottom: 0;
         .col-md-3 div{
             h1{
              font-size: 35px;  
@@ -104,6 +158,7 @@
             padding: 20px;
         }
         .second{
+            .col-md-6
             .image{
                 max-height: 400px;
                     img{
@@ -112,12 +167,14 @@
                     }
                 }
             .text-wrap{
+                padding: 0 25px;
                 .text{
+                    margin: auto 0;
                     h1{
                         font-size: 25px;
                     }
                     &::after{
-                        bottom: -70px;
+                        bottom: -120px;
                     }
                 }
             }
@@ -145,19 +202,18 @@
             padding: 0;
         }
         .brands{
-            margin: 0;
-            padding: 0;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+            display: none;
         }
         .form{
-            .image{
-                img{
-                    height: 40%;
+            margin-top: 40px;
+            form{
+                height: 100%;
+                .textarea{
+                    height: 100%;
                 }
+            }
+            .image{
+                display: none;
             }
             .links{
                 .link{
@@ -165,9 +221,9 @@
                 }
             }
             &::after{
-                top: -10px;
+                top: -25px;
                 width: 85%;
-                height: 55%;
+                height: 105%;
             }
         }
     }
