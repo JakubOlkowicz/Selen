@@ -46,6 +46,10 @@ section{
         box-shadow: 0 10px 10px -10px $color-blue;
     }
 }
+.noHover{
+    pointer-events: none;
+    cursor: pointer;
+}
 .nav-item,.links a{
     display: inline-block;
     vertical-align: middle;

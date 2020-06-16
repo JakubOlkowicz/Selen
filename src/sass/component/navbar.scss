@@ -42,6 +42,8 @@
         all: unset;
         font-size: 24px;
         display: block;
+        cursor: pointer;
+        margin: 0 auto;
     }
     form{
         display: flex;
@@ -81,5 +83,15 @@
         &:focus{
             outline: none;
         }
+    }
+    .navbar-item a:hover{
+        all: unset;
+    }
+    .nav-item{
+        cursor: pointer;
+    }
+    .btn-outline-success:hover {
+        background-color: $color-blue;
+        border-color: $color-blue;
     }
 }
